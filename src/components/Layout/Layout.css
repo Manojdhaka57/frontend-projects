@@ -1,0 +1,22 @@
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.sidebar-menu {
+  width: 250px;
+  transition: all 0.5s linear;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.contant-wrapper {
+  width: calc(-250px + 100%);
+  transition: all 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}

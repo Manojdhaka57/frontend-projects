@@ -1,0 +1,15 @@
+.notes {
+  position: relative;
+}
+.note {
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+  border: 1px solid black;
+  width: 200px;
+  cursor: move;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: lightyellow;
+}
