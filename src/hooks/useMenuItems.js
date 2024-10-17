@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useMemo } from "react";
 import { ROUTES } from "../constants";
-export default () => {
+const useMemuItems = () => {
   const { pathname } = useLocation();
   return useMemo(() => {
     return [
@@ -38,3 +38,5 @@ export default () => {
     ];
   }, [pathname]);
 };
+
+export default useMemuItems;

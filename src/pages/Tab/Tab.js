@@ -1,37 +1,40 @@
 import React, { useState, useMemo } from "react";
 import "./Tab.css";
 const Tab = () => {
-  const data = [
-    {
-      id: 1,
-      value: "tab1",
-      label: "Tab 1",
-      description: "tooltip text for tab 1",
-      lazy: true,
-      selected: false,
-      disabled: false,
-      content: <div>tab 1</div>,
-    },
-    {
-      id: 2,
-      value: "tab2",
-      label: "Tab 2",
-      description: "tooltip text for tab 2",
-      lazy: true,
-      selected: true,
-      disabled: false,
-      content: <div>tab content 2</div>,
-    },
-    {
-      id: 3,
-      value: "tab3",
-      label: "Tab 3",
-      description: "tooltip text for tab 3",
-      lazy: true,
-      disabled: false,
-      content: <div>tab content 3</div>,
-    },
-  ];
+  const data = useMemo(
+    () => [
+      {
+        id: 1,
+        value: "tab1",
+        label: "Tab 1",
+        description: "tooltip text for tab 1",
+        lazy: true,
+        selected: false,
+        disabled: false,
+        content: <div>tab 1</div>,
+      },
+      {
+        id: 2,
+        value: "tab2",
+        label: "Tab 2",
+        description: "tooltip text for tab 2",
+        lazy: true,
+        selected: true,
+        disabled: false,
+        content: <div>tab content 2</div>,
+      },
+      {
+        id: 3,
+        value: "tab3",
+        label: "Tab 3",
+        description: "tooltip text for tab 3",
+        lazy: true,
+        disabled: false,
+        content: <div>tab content 3</div>,
+      },
+    ],
+    []
+  );
 
   const selected = useMemo(() => {
     const selected = data.find((item) => item.selected);

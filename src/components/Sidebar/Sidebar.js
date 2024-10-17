@@ -5,19 +5,21 @@ import "./Sidebar.css";
 import { useTheme } from "../../contexts/theme-context";
 
 const Sidebar = () => {
-  const { theme, toggleTheme, isDarkMode } = useTheme();
-  console.log("theme", theme);
+  const { toggleTheme, isDarkMode } = useTheme();
 
   const menuItems = useMenuItems();
 
   const navigate = useNavigate();
 
-  const handleOnMenuClick = useCallback((event, item) => {
-    event.preventDefault();
-    if (item.path) {
-      navigate(item.path);
-    }
-  }, []);
+  const handleOnMenuClick = useCallback(
+    (event, item) => {
+      event.preventDefault();
+      if (item.path) {
+        navigate(item.path);
+      }
+    },
+    [navigate]
+  );
 
   return (
     <div className="sidebar-menuitems">
