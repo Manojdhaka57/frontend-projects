@@ -5,6 +5,7 @@
   --border-color: white;
   --box-border-color: #333333;
   --tab-background-color: bisque;
+  --card-background-color-yellow: lightyellow;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
   --border-color: #333333;
   --box-border-color: #ffffff;
   --tab-background-color: #333333;
+  --card-background-color-yellow: yellowgreen;
 }
 *,
 *::after,
