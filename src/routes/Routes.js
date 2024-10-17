@@ -7,6 +7,7 @@ import GridLights from "../pages/GridLights/GridLights";
 import Stepper from "../pages/Stepper/Stepper";
 import Tab from "../pages/Tab/Tab";
 import DragAndDropNotes from "../pages/DragAndDropNotes/DragAndDropNotes";
+import PageNotFound from "../pages/PageNotFound/PageNotFound";
 
 const AppRoutes = () => {
   const router = useRoutes([
@@ -15,6 +16,7 @@ const AppRoutes = () => {
     { path: ROUTES.gridLights, element: <GridLights /> },
     { path: ROUTES.tab, element: <Tab /> },
     { path: ROUTES.dragAndDropNotes, element: <DragAndDropNotes /> },
+    { path: "/*", element: <PageNotFound /> },
   ]);
   return <Layout>{router}</Layout>;
 };
