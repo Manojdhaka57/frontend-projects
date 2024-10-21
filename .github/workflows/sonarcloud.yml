@@ -43,6 +43,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests and generate coverage
+        run: npm test -- --coverage
+
       - name: Analyze with SonarCloud
 
         # You can pin the exact commit or the version.
